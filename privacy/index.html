@@ -42,9 +42,9 @@
 <!-- ============================== ҚАЗАҚША ============================== -->
 <section id="kk" lang="kk">
   <h1>Құпиялылық саясаты</h1>
-  <p class="date">Күшіне енген күні: 2026 жылғы 14 қазан</p>
+  <p class="date">Күшіне енген күні: 2026 жылғы 26 қазан (алдыңғы нұсқасы — 2026 жылғы 14 қазан)</p>
   <p>Бұл саясат «Ата мен Апа» ойынының (бұдан әрі — «ойын») қандай деректерді жинайтынын және оларды қалай пайдаланатынын түсіндіреді. Ойынды Қазақстандағы Yurt Games Studio әзірлеушісі жасаған (Алматы). Ойын бүкіл отбасыға, оның ішінде балаларға арналған.</p>
-  <p class="note">Қысқаша: ойын есімді, телефон нөмірін, электрондық поштаны, фотоларды, контактілерді және орналасқан жерді сұрамайды. Тіркелу жоқ. Ойынды жақсарту үшін тек ойын туралы жасырын (кім екені белгісіз) мәліметтер жиналады.</p>
+  <p class="note">Қысқаша: ойын есімді, телефон нөмірін, электрондық поштаны, фотоларды, контактілерді және орналасқан жерді сұрамайды. Тіркелу жоқ. Ойынды жақсарту үшін ойын туралы жасырын (кім екені белгісіз) мәліметтер жиналады. Челлендждердің әлемдік кестесіне тек дайын сөздерден құралған лақап ат, ту және нәтиже жіберіледі. «Жарнамасыз» сатып алуды Google Play жүргізеді — карта деректерін біз көрмейміз.</p>
 
   <h2>1. Біз жинамайтын деректер</h2>
   <ul>
@@ -52,22 +52,33 @@
     <li>Фото, бейне, дыбыс жазбалары, контактілер, хабарламалар.</li>
     <li>Нақты орналасқан жер (GPS).</li>
     <li>Телефонның жарнамалық идентификаторы (Advertising ID) — оны жинау ойында өшірілген.</li>
+    <li>Төлем картасының деректері — төлемді толығымен Google Play жүргізеді.</li>
   </ul>
 
   <h2>2. Телефонның өзінде сақталатын деректер</h2>
-  <p>Ойын барысы (жұлдыздар, асықтар, киіз үйге сатып алынған заттар, тіл және дыбыс баптаулары) тек сіздің телефоныңызда сақталады және бізге жіберілмейді. Ойынды телефоннан өшірсеңіз, бұл деректер де жойылады.</p>
+  <p>Ойын барысы (жұлдыздар, асықтар, киіз үйге сатып алынған заттар, тіл және дыбыс баптаулары, «Жарнамасыз» сатып алынғаны туралы белгі) телефоныңызда сақталады. Ойынды телефоннан өшірсеңіз, бұл деректер де жойылады. Бізге тек 3-тармақта жазылған челлендж нәтижелері жіберіледі.</p>
 
-  <h2>3. Ойын аналитикасы (Google Firebase Analytics)</h2>
+  <h2>3. Челлендждердің әлемдік кестесі (біздің сервер)</h2>
+  <p>Челлендждерде («Шай құй», «Бауырсақ», «Дүкен», «Күй») нәтижеңізді басқа елдердің ойыншыларымен салыстыруға болады. Ол үшін ойын біздің серверге (Cloudflare қызметінде орналасқан) мыналарды жібереді:</p>
+  <ul>
+    <li>телефонда жасалатын кездейсоқ ойыншы нөмірі және құпия код (кестедегі жазба сіздікі екенін тану үшін; онда есім де, телефон туралы мәлімет те жоқ);</li>
+    <li>лақап ат — тек ойындағы дайын сөздерден құралады, өз мәтініңді жазу мүмкін емес;</li>
+    <li>тізімнен таңдалған ту;</li>
+    <li>челлендж нәтижесі және оның уақыты.</li>
+  </ul>
+  <p>Кестеде басқа ойыншылар тек лақап атты, туды және нәтижені көреді. Біз IP-мекенжайды кестеде сақтамаймыз; деректерді жеткізу үшін Cloudflare оны өз ережелері бойынша қысқа уақыт өңдеуі мүмкін. Жазбалар кесте жұмыс істеп тұрғанда сақталады. Жазбаңызды өшіргіңіз келсе, бізге лақап атыңыз бен туыңызды жазыңыз — өшіреміз. Сайттағы (браузердегі) нұсқа нәтижені жібермейді, кестені тек көрсетеді.</p>
+
+  <h2>4. Ойын аналитикасы (Google Firebase Analytics)</h2>
   <p>Ойынның қай жері қиын, қай жері жеңіл екенін білу үшін біз Google Firebase Analytics қызметін пайдаланамыз. Ол адамды анықтамайтын жасырын оқиғаларды жинайды:</p>
   <ul>
     <li>қай ойын мен эпизод ашылды, раунд қалай аяқталды (сәтті ме, жоқ па, қателік себебі), қанша жұлдыз алынды, эпизод қанша уақыт жүрді;</li>
-    <li>жарнамалық бейне көрілді ме, күн сыйлығы алынды ма, киіз үйге не сатып алынды (ойын ішіндегі асықпен);</li>
+    <li>жарнамалық бейне көрілді ме, күн сыйлығы алынды ма, киіз үйге не сатып алынды (ойын ішіндегі асықпен), «Жарнамасыз» сатып алынды ма немесе қалпына келтірілді ме (сомасыз және төлеушінің деректерінсіз);</li>
     <li>техникалық мәліметтер: телефон моделі, Android нұсқасы, тіл, ойын нұсқасы, Google IP-мекенжай бойынша анықтайтын шамамен алынған ел/аймақ, қолданбаның кездейсоқ нөмірі (app instance ID).</li>
   </ul>
   <p>Бұл деректерде есім де, байланыс деректері де жоқ, біз олар бойынша нақты адамды анықтай алмаймыз. Жарнамаға байланысты деректерді жинау және жарнаманы жекелендіру Firebase-те өшірілген. Оқиғалар туралы толық деректер Google-да 2 айға дейін сақталады, одан кейін тек жалпы есептер қалады.</p>
 
-  <h2>4. Жарнама (Google AdMob)</h2>
-  <p>Ойын тегін, сондықтан онда Google AdMob жарнамасы бар: ойындар арасындағы қысқа бейнелер және ойыншы өзі таңдайтын «марапатқа жарнама» (мысалы, «×2 асық» немесе «Қатені түзету»).</p>
+  <h2>5. Жарнама (Google AdMob)</h2>
+  <p>Ойын тегін, сондықтан онда Google AdMob жарнамасы бар: ойындар арасындағы қысқа бейнелер және ойыншы өзі таңдайтын «марапатқа жарнама» (мысалы, «×2 асық»). Жарнаманы «Жарнамасыз» сатып алу арқылы өшіруге болады (6-тармақ).</p>
   <ul>
     <li>Әр жарнама сұрауы «балаларға арналған» деп белгіленеді (tag for child-directed treatment) — жарнама жекелендірілмейді және қызығушылықтар бойынша таңдалмайды.</li>
     <li>Тек «G» санатындағы (барлық жасқа арналған) жарнама көрсетіледі.</li>
@@ -75,28 +86,37 @@
     <li>Жарнаманы көрсету және алаяқтықтан қорғау үшін Google құрылғы туралы техникалық мәліметтерді (мысалы, IP-мекенжай, телефон моделі) өңдеуі мүмкін. Толығырақ: <a href="https://policies.google.com/technologies/partner-sites">Google серіктестердің қолданбаларындағы деректерді қалай пайдаланады</a>.</li>
   </ul>
 
-  <h2>5. Балалар</h2>
-  <p>Ойын Google Play «Отбасы» (Families) саясатына сай жасалған. Біз балалардан жеке деректерді жинамаймыз және сұрамаймыз. Ойында чат, жеке хабарламалар немесе өз мәтініңді жариялау мүмкіндігі жоқ. Ата-аналар кез келген сұрақпен бізге жаза алады.</p>
+  <h2>6. «Жарнамасыз» сатып алу (Google Play)</h2>
+  <p>Ойын ішінде бір рет төленетін «Жарнамасыз» сатып алу бар: ол ойындар арасындағы жарнаманы өшіреді. Төлемді толығымен Google Play жүргізеді: карта деректерін, есімді және поштаны біз көрмейміз және сақтамаймыз. Ойын Google Play-ден тек сатып алу бар-жоғын біледі де, телефонда белгі қояды. Сатып алу батырмасының алдында ересектерге арналған тексеру тұр. Төлемді қайтару — Google Play ережелері бойынша. Google Play төлемдері туралы: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</p>
 
-  <h2>6. Деректерді кімге береміз</h2>
-  <p>Деректерді сатпаймыз. Жоғарыда көрсетілген жасырын деректерді тек Google (Firebase Analytics және AdMob) өңдейді. Google-дың құпиялылық саясаты: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>; Firebase: <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>.</p>
+  <h2>7. Ойынды бағалау және «Бөлісу»</h2>
+  <ul>
+    <li>Ойын бір рет Google Play-дің стандартты бағалау терезесін ашуы мүмкін. Терезені көрсету-көрсетпеуді Google шешеді; қандай баға қойылғанын ойын білмейді.</li>
+    <li>Челлендждерде нәтиже суретін жасап, телефонның стандартты «Бөлісу» мәзірін ашуға болады. Сурет телефонда жасалады; қайда және кімге жіберуді пайдаланушы өзі таңдайды, бізге ештеңе жіберілмейді. Бөлісу батырмасының алдында ересектерге арналған тексеру тұр.</li>
+  </ul>
 
-  <h2>7. Сіздің құқықтарыңыз</h2>
-  <p>Ойынды телефоннан өшірсеңіз, ойын барысы жойылады, ал аналитика жаңа кездейсоқ нөмірмен басталады. Аналитика деректері жасырын болғандықтан, біз нақты ойыншының деректерін таба алмаймыз. Деректер туралы сұрақтарыңыз болса, бізге жазыңыз. Біз Қазақстан Республикасының «Дербес деректер және оларды қорғау туралы» Заңын сақтаймыз.</p>
+  <h2>8. Балалар</h2>
+  <p>Ойын Google Play «Отбасы» (Families) саясатына сай жасалған. Біз балалардан жеке деректерді жинамаймыз және сұрамаймыз. Ойында чат, жеке хабарламалар немесе өз мәтініңді жариялау мүмкіндігі жоқ: кестедегі лақап ат тек дайын сөздерден құралады. Сатып алу, сыртқы сілтемелер және «Бөлісу» ересектерге арналған тексерудің артында тұр. Ата-аналар кез келген сұрақпен бізге жаза алады.</p>
 
-  <h2>8. Өзгерістер</h2>
-  <p>Ойынға жаңа мүмкіндіктер қосылса (мысалы, ойын ішіндегі сатып алулар), бұл бет жаңартылады және жаңа күні көрсетіледі.</p>
+  <h2>9. Деректерді кімге береміз</h2>
+  <p>Деректерді сатпаймыз. Жоғарыда көрсетілген деректерді тек мыналар өңдейді: Google (Firebase Analytics, AdMob, Google Play төлемдері) және Cloudflare (әлемдік кесте сервері). Google-дың құпиялылық саясаты: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>; Firebase: <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>; Cloudflare: <a href="https://www.cloudflare.com/privacypolicy/">cloudflare.com/privacypolicy</a>.</p>
 
-  <h2>9. Байланыс</h2>
+  <h2>10. Сіздің құқықтарыңыз</h2>
+  <p>Ойынды телефоннан өшірсеңіз, ойын барысы жойылады, ал аналитика жаңа кездейсоқ нөмірмен басталады. Аналитика деректері жасырын болғандықтан, біз нақты ойыншының деректерін таба алмаймыз. Әлемдік кестедегі жазбаны өшіру үшін бізге лақап ат пен туды жазыңыз. Деректер туралы сұрақтарыңыз болса, бізге жазыңыз. Біз Қазақстан Республикасының «Дербес деректер және оларды қорғау туралы» Заңын сақтаймыз.</p>
+
+  <h2>11. Өзгерістер</h2>
+  <p>Ойынға деректерге қатысты жаңа мүмкіндіктер қосылса, бұл бет жаңартылады және жаңа күні көрсетіледі.</p>
+
+  <h2>12. Байланыс</h2>
   <p>Yurt Games Studio, Алматы, Қазақстан · <a href="mailto:yurtgamesstudio@gmail.com">yurtgamesstudio@gmail.com</a></p>
 </section>
 
 <!-- ============================== РУССКИЙ ============================== -->
 <section id="ru" lang="ru">
   <h1>Политика конфиденциальности</h1>
-  <p class="date">Действует с 14 октября 2026 года</p>
+  <p class="date">Действует с 26 октября 2026 года (прежняя редакция — от 14 октября 2026 года)</p>
   <p>Эта политика объясняет, какие данные собирает игра «Ата мен Апа» (далее — «игра») и как они используются. Игру создал разработчик Yurt Games Studio (Алматы, Казахстан). Игра предназначена для всей семьи, в том числе для детей.</p>
-  <p class="note">Коротко: игра не спрашивает имя, телефон, почту, фото, контакты и местоположение. Регистрации нет. Чтобы улучшать игру, собираются только анонимные сведения о самой игре — по ним нельзя узнать, кто играл.</p>
+  <p class="note">Коротко: игра не спрашивает имя, телефон, почту, фото, контакты и местоположение. Регистрации нет. Чтобы улучшать игру, собираются анонимные сведения о самой игре — по ним нельзя узнать, кто играл. В мировую таблицу челленджей уходят только ник из готовых слов, флаг и результат. Покупку «Без рекламы» проводит Google Play — данных карты мы не видим.</p>
 
   <h2>1. Что мы не собираем</h2>
   <ul>
@@ -104,22 +124,33 @@
     <li>Фото, видео, аудиозаписи, контакты, сообщения.</li>
     <li>Точное местоположение (GPS).</li>
     <li>Рекламный идентификатор телефона (Advertising ID) — его сбор в игре отключён.</li>
+    <li>Данные платёжной карты — оплату целиком проводит Google Play.</li>
   </ul>
 
-  <h2>2. Что хранится только на телефоне</h2>
-  <p>Прогресс в игре (звёзды, асыки, купленные для юрты вещи, язык и звук) хранится только на вашем телефоне и нам не отправляется. Если удалить игру, эти данные удаляются вместе с ней.</p>
+  <h2>2. Что хранится на телефоне</h2>
+  <p>Прогресс в игре (звёзды, асыки, купленные для юрты вещи, язык и звук, отметка о покупке «Без рекламы») хранится на вашем телефоне. Если удалить игру, эти данные удаляются вместе с ней. На наш сервер уходят только результаты челленджей — см. раздел 3.</p>
 
-  <h2>3. Аналитика игры (Google Firebase Analytics)</h2>
+  <h2>3. Мировая таблица челленджей (наш сервер)</h2>
+  <p>В челленджах («Шай құй», «Бауырсақ», «Дүкен» и «Күй» челлендж) свой результат можно сравнить с игроками из других стран. Для этого игра отправляет на наш сервер (он работает на сервисе Cloudflare):</p>
+  <ul>
+    <li>случайный номер игрока и секретный код, созданные на телефоне (чтобы узнать, что запись ваша; в них нет ни имени, ни сведений о телефоне);</li>
+    <li>ник — он собирается только из готовых слов игры, свой текст написать нельзя;</li>
+    <li>флаг, выбранный из списка;</li>
+    <li>результат челленджа и время, когда он показан.</li>
+  </ul>
+  <p>Другие игроки видят в таблице только ник, флаг и результат. IP-адрес мы в таблице не храним; чтобы доставить данные, Cloudflare может кратковременно обрабатывать его по своим правилам. Записи хранятся, пока работает таблица. Чтобы удалить свою запись, напишите нам ник и флаг — удалим. Версия игры на сайте (в браузере) результаты не отправляет, а только показывает таблицу.</p>
+
+  <h2>4. Аналитика игры (Google Firebase Analytics)</h2>
   <p>Чтобы понимать, где в игре трудно, а где слишком легко, мы используем Google Firebase Analytics. Он собирает анонимные события, по которым нельзя определить человека:</p>
   <ul>
     <li>какая игра и эпизод открыты, как закончился раунд (удачно или нет и причина ошибки), сколько звёзд получено, сколько длился эпизод;</li>
-    <li>посмотрен ли рекламный ролик за награду, забран ли подарок дня, что куплено для юрты (за игровые асыки);</li>
+    <li>посмотрен ли рекламный ролик за награду, забран ли подарок дня, что куплено для юрты (за игровые асыки), куплена или восстановлена ли покупка «Без рекламы» (без суммы и данных плательщика);</li>
     <li>технические сведения: модель телефона, версия Android, язык, версия игры, примерная страна или регион, которые Google определяет по IP-адресу, и случайный номер установки приложения (app instance ID).</li>
   </ul>
   <p>В этих данных нет имён и контактов, и мы не можем по ним узнать конкретного человека. Сбор рекламных данных и персонализация рекламы в Firebase отключены. Подробные данные о событиях хранятся в Google до 2 месяцев, после этого остаются только общие отчёты.</p>
 
-  <h2>4. Реклама (Google AdMob)</h2>
-  <p>Игра бесплатная, поэтому в ней есть реклама Google AdMob: короткие ролики между играми и «реклама за награду», которую игрок выбирает сам (например, «×2 асыка» или «Исправить ошибку»).</p>
+  <h2>5. Реклама (Google AdMob)</h2>
+  <p>Игра бесплатная, поэтому в ней есть реклама Google AdMob: короткие ролики между играми и «реклама за награду», которую игрок выбирает сам (например, «×2 асыка»). Рекламу между играми можно отключить покупкой «Без рекламы» (раздел 6).</p>
   <ul>
     <li>Каждый запрос рекламы помечен как «для детей» (tag for child-directed treatment): реклама не персонализируется и не подбирается по интересам.</li>
     <li>Показывается только реклама категории «G» — для всех возрастов.</li>
@@ -127,28 +158,37 @@
     <li>Чтобы показать рекламу и защититься от мошенничества, Google может обрабатывать технические сведения об устройстве (например, IP-адрес, модель телефона). Подробнее: <a href="https://policies.google.com/technologies/partner-sites">как Google использует данные из приложений партнёров</a>.</li>
   </ul>
 
-  <h2>5. Дети</h2>
-  <p>Игра сделана по правилам Google Play для семейных приложений (Families). Мы не собираем и не запрашиваем личные данные детей. В игре нет чата, личных сообщений и возможности публиковать свой текст. Родители могут написать нам с любым вопросом.</p>
+  <h2>6. Покупка «Без рекламы» (Google Play)</h2>
+  <p>В игре есть разовая покупка «Без рекламы» — она отключает рекламу между играми. Оплату целиком проводит Google Play: данных карты, имени и почты мы не видим и не храним. Игра узнаёт от Google Play только, есть ли покупка, и ставит отметку на телефоне. Перед кнопкой покупки стоит проверка «для взрослых». Возврат денег — по правилам Google Play. О платежах Google Play: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</p>
 
-  <h2>6. Кому передаются данные</h2>
-  <p>Мы не продаём данные. Описанные выше анонимные данные обрабатывает только Google (Firebase Analytics и AdMob). Политика конфиденциальности Google: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>; Firebase: <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>.</p>
+  <h2>7. Оценка игры и «Поделиться»</h2>
+  <ul>
+    <li>Игра может один раз открыть стандартное окно оценки Google Play. Покажет ли его Google, решает Google; какую оценку поставили, игра не узнаёт.</li>
+    <li>В челленджах можно сделать картинку с результатом и открыть стандартное меню телефона «Поделиться». Картинка создаётся на телефоне; куда и кому её отправить, человек выбирает сам, нам ничего не отправляется. Перед кнопкой «Поделиться» стоит проверка «для взрослых».</li>
+  </ul>
 
-  <h2>7. Ваши права</h2>
-  <p>Если удалить игру с телефона, прогресс удалится, а аналитика начнётся с новым случайным номером. Данные аналитики анонимны, поэтому мы не можем найти данные конкретного игрока. Если у вас есть вопросы о данных — напишите нам. Мы соблюдаем Закон Республики Казахстан «О персональных данных и их защите».</p>
+  <h2>8. Дети</h2>
+  <p>Игра сделана по правилам Google Play для семейных приложений (Families). Мы не собираем и не запрашиваем личные данные детей. В игре нет чата, личных сообщений и возможности публиковать свой текст: ник в таблице собирается только из готовых слов. Покупка, внешние ссылки и «Поделиться» стоят за проверкой «для взрослых». Родители могут написать нам с любым вопросом.</p>
 
-  <h2>8. Изменения</h2>
-  <p>Если в игре появятся новые возможности (например, покупки внутри игры), эта страница будет обновлена, и на ней будет указана новая дата.</p>
+  <h2>9. Кому передаются данные</h2>
+  <p>Мы не продаём данные. Описанные выше данные обрабатывают только Google (Firebase Analytics, AdMob, платежи Google Play) и Cloudflare (сервер мировой таблицы). Политика конфиденциальности Google: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>; Firebase: <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>; Cloudflare: <a href="https://www.cloudflare.com/privacypolicy/">cloudflare.com/privacypolicy</a>.</p>
 
-  <h2>9. Контакты</h2>
+  <h2>10. Ваши права</h2>
+  <p>Если удалить игру с телефона, прогресс удалится, а аналитика начнётся с новым случайным номером. Данные аналитики анонимны, поэтому мы не можем найти данные конкретного игрока. Чтобы удалить запись в мировой таблице, напишите нам ник и флаг. Если у вас есть вопросы о данных — напишите нам. Мы соблюдаем Закон Республики Казахстан «О персональных данных и их защите».</p>
+
+  <h2>11. Изменения</h2>
+  <p>Если в игре появятся новые возможности, связанные с данными, эта страница будет обновлена, и на ней будет указана новая дата.</p>
+
+  <h2>12. Контакты</h2>
   <p>Yurt Games Studio, Алматы, Казахстан · <a href="mailto:yurtgamesstudio@gmail.com">yurtgamesstudio@gmail.com</a></p>
 </section>
 
 <!-- ============================== ENGLISH ============================== -->
 <section id="en" lang="en">
   <h1>Privacy Policy</h1>
-  <p class="date">Effective date: 14 October 2026</p>
+  <p class="date">Effective date: 26 October 2026 (previous version: 14 October 2026)</p>
   <p>This policy explains what data the game “Ata men Apa” (the “game”) collects and how it is used. The game is made by Yurt Games Studio (Almaty, Kazakhstan). It is designed for the whole family, including children.</p>
-  <p class="note">In short: the game never asks for a name, phone number, email, photos, contacts or location. There is no sign-up. To improve the game we only collect anonymous information about gameplay that cannot identify who played.</p>
+  <p class="note">In short: the game never asks for a name, phone number, email, photos, contacts or location. There is no sign-up. To improve the game we collect anonymous information about gameplay that cannot identify who played. The challenge world table only receives a nickname made of ready-made words, a flag and a score. The “No ads” purchase is handled by Google Play — we never see card details.</p>
 
   <h2>1. What we do not collect</h2>
   <ul>
@@ -156,22 +196,33 @@
     <li>Photos, videos, audio recordings, contacts, messages.</li>
     <li>Precise location (GPS).</li>
     <li>The device advertising ID — its collection is turned off in the game.</li>
+    <li>Payment card details — payment is handled entirely by Google Play.</li>
   </ul>
 
-  <h2>2. Data stored only on your device</h2>
-  <p>Game progress (stars, asyks, items bought for the yurt, language and sound settings) is stored only on your phone and is not sent to us. Uninstalling the game deletes it.</p>
+  <h2>2. Data stored on your device</h2>
+  <p>Game progress (stars, asyks, items bought for the yurt, language and sound settings, a note that “No ads” was purchased) is stored on your phone. Uninstalling the game deletes it. Only challenge results are sent to our server — see section 3.</p>
 
-  <h2>3. Game analytics (Google Firebase Analytics)</h2>
+  <h2>3. Challenge world table (our server)</h2>
+  <p>In the challenges (Shai Kui, Baursak, Duken and Kui Challenge) players can compare their score with players from other countries. For this the game sends to our server (hosted on Cloudflare):</p>
+  <ul>
+    <li>a random player number and a secret code created on the phone (so that your entry can be recognised as yours; they contain no name and no device information);</li>
+    <li>a nickname — built only from ready-made words in the game; free text is not possible;</li>
+    <li>a flag chosen from a list;</li>
+    <li>the challenge result and when it was achieved.</li>
+  </ul>
+  <p>Other players see only the nickname, flag and score. We do not store IP addresses in the table; to deliver the data, Cloudflare may briefly process them under its own policy. Entries are kept while the table is running. To delete your entry, send us your nickname and flag and we will remove it. The browser (website) version of the game does not submit results; it only shows the table.</p>
+
+  <h2>4. Game analytics (Google Firebase Analytics)</h2>
   <p>To learn which parts of the game are too hard or too easy we use Google Firebase Analytics. It collects anonymous events that cannot identify a person:</p>
   <ul>
     <li>which game and episode was opened, how a round ended (success or not and the reason for a mistake), stars earned, how long an episode took;</li>
-    <li>whether a rewarded video was watched, whether the daily gift was collected, what was bought for the yurt (with in-game asyks);</li>
+    <li>whether a rewarded video was watched, whether the daily gift was collected, what was bought for the yurt (with in-game asyks), whether “No ads” was purchased or restored (without the amount or any payer details);</li>
     <li>technical data: device model, Android version, language, game version, approximate country or region that Google derives from the IP address, and a random app instance ID.</li>
   </ul>
   <p>This data contains no names or contact details, and we cannot use it to identify a particular person. Advertising data collection and ad personalisation are turned off in Firebase. Detailed event data is kept by Google for up to 2 months; after that only aggregate reports remain.</p>
 
-  <h2>4. Ads (Google AdMob)</h2>
-  <p>The game is free, so it shows Google AdMob ads: short videos between games and optional rewarded videos that the player chooses to watch (for example “×2 asyks” or “Fix the mistake”).</p>
+  <h2>5. Ads (Google AdMob)</h2>
+  <p>The game is free, so it shows Google AdMob ads: short videos between games and optional rewarded videos that the player chooses to watch (for example “×2 asyks”). Ads between games can be switched off with the “No ads” purchase (section 6).</p>
   <ul>
     <li>Every ad request is tagged for child-directed treatment: ads are not personalised and not based on interests.</li>
     <li>Only ads rated “G” (suitable for all ages) are shown.</li>
@@ -179,19 +230,28 @@
     <li>To deliver ads and prevent fraud, Google may process technical device data (such as IP address and device model). Learn more: <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from apps that use its services</a>.</li>
   </ul>
 
-  <h2>5. Children</h2>
-  <p>The game follows the Google Play Families policy. We do not collect or ask for personal information from children. There is no chat, no private messaging and no way to publish your own text. Parents are welcome to contact us with any question.</p>
+  <h2>6. “No ads” purchase (Google Play)</h2>
+  <p>The game offers a one-time “No ads” purchase that turns off ads between games. Payment is handled entirely by Google Play: we do not see or store card details, names or email addresses. The game only learns from Google Play whether the purchase exists and keeps a note on the phone. The purchase button is behind an adult check. Refunds follow Google Play rules. About Google Play payments: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</p>
 
-  <h2>6. Who receives data</h2>
-  <p>We do not sell data. The anonymous data described above is processed only by Google (Firebase Analytics and AdMob). Google Privacy Policy: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>; Firebase: <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>.</p>
+  <h2>7. Rating the game and “Share”</h2>
+  <ul>
+    <li>The game may once open the standard Google Play rating window. Whether it actually appears is decided by Google; the game never learns what rating was given.</li>
+    <li>In the challenges you can make a picture of your result and open the phone’s standard “Share” menu. The picture is made on the phone; the user chooses where and to whom to send it, and nothing is sent to us. The “Share” button is behind an adult check.</li>
+  </ul>
 
-  <h2>7. Your choices</h2>
-  <p>Uninstalling the game deletes your progress, and analytics starts again with a new random ID. Because analytics data is anonymous, we cannot find the data of a particular player. If you have questions about data, please write to us. We comply with the Law of the Republic of Kazakhstan “On Personal Data and Its Protection”.</p>
+  <h2>8. Children</h2>
+  <p>The game follows the Google Play Families policy. We do not collect or ask for personal information from children. There is no chat, no private messaging and no way to publish your own text: table nicknames are built only from ready-made words. Purchases, external links and “Share” are behind an adult check. Parents are welcome to contact us with any question.</p>
 
-  <h2>8. Changes</h2>
-  <p>If new features are added to the game (for example in-app purchases), this page will be updated and show a new date.</p>
+  <h2>9. Who receives data</h2>
+  <p>We do not sell data. The data described above is processed only by Google (Firebase Analytics, AdMob, Google Play payments) and Cloudflare (world table server). Google Privacy Policy: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>; Firebase: <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>; Cloudflare: <a href="https://www.cloudflare.com/privacypolicy/">cloudflare.com/privacypolicy</a>.</p>
 
-  <h2>9. Contact</h2>
+  <h2>10. Your choices</h2>
+  <p>Uninstalling the game deletes your progress, and analytics starts again with a new random ID. Because analytics data is anonymous, we cannot find the data of a particular player. To delete your world-table entry, send us your nickname and flag. If you have questions about data, please write to us. We comply with the Law of the Republic of Kazakhstan “On Personal Data and Its Protection”.</p>
+
+  <h2>11. Changes</h2>
+  <p>If data-related features are added to the game, this page will be updated and show a new date.</p>
+
+  <h2>12. Contact</h2>
   <p>Yurt Games Studio, Almaty, Kazakhstan · <a href="mailto:yurtgamesstudio@gmail.com">yurtgamesstudio@gmail.com</a></p>
 </section>
 
